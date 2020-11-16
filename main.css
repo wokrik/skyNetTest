@@ -1,0 +1,301 @@
+body {
+ margin: 0;
+ padding: 0;
+ background: #efeff4;
+}
+
+h2{
+    margin: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.brown{background-color: #70603e;}
+.blue{background-color: #0075d9;}
+.orange{background-color: #ee4700;}
+
+
+.btn:hover{
+    cursor: pointer;
+}
+
+div[data-action="show-periods"]:hover,
+div[data-action="show-details"]:hover{
+    cursor: pointer;
+}
+
+*{box-sizing: border-box;}
+
+#app{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    color: #797979;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.arrow{
+    border: 1px solid #cccccc;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.arrow_left{
+    position: absolute;
+    border-color: #6fb316;
+    top: 50%;
+    left: 15px;
+    -moz-transform: translateY(-50%) rotate(135deg);
+    -webkit-transform: translateY(-50%) rotate(135deg);
+    -o-transform: translateY(-50%) rotate(135deg);
+    -ms-transform: translateY(-50%) rotate(135deg);
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow_right{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    -moz-transform: translate(-50%) rotate(-45deg);
+    -webkit-transform: translate(-50%) rotate(-45deg);
+    -o-transform: translate(-50%) rotate(-45deg);
+    -ms-transform: translate(-50%) rotate(-45deg);
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.arrow_little{
+    border: solid #ccc;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.group{
+    width: 100%;
+    background: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#app[data-mode="periods"] .group,
+#app[data-mode="details"] .group{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+}
+
+.tarif,
+.period{
+    width: 100%;
+    padding-left: 15px;
+}
+
+.tarif{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarif__name{
+    padding: 20px 0;
+    color: #6fb316;
+}
+
+.tarif__speed{
+    display: inline-block;
+    padding: 10px 10px 10px 15px;
+    margin-left: -15px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.tarif__info{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tarif__speed,
+.tarif__prices{
+    font-weight: 600;
+}
+
+.tarif__prices{
+    font-size: 24px;
+}
+
+.tarif__options{
+    margin-top: 10px;
+}
+
+.tarif__more-info{
+    padding: 15px 20px 15px 0;
+}
+
+.tarif__link{
+    display: inline-block;
+    color: #0075d9;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.all-periods{
+    width: 100%;
+    background: #efeff4;
+}
+
+.header{
+    text-align: center;
+    background: #f7f7f8;
+    color: black;
+    position: relative;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.periods{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.period{
+    padding-left: 15px;
+    background: white;
+    margin-bottom: 25px;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.period__info{
+    padding: 10px 0;
+    position: relative;
+}
+
+.period__info:hover{
+    cursor: pointer;
+}
+
+.period__duration{
+    padding: 15px 0;
+    font-size: 20px;
+    color: #6fb316;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+}
+
+.period__price{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detailsField{
+    width: 100%;
+}
+
+.details{
+    padding-left: 15px;
+    margin-bottom: 25px;
+    background: white;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details__header{
+    color: #6fb316;
+    padding: 20px 0;
+}
+
+.details__info{
+    border: 1px solid #cccccc;
+    border-right: none;
+    border-left: none;
+}
+
+.details__duration,
+.details__price{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.details__price{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.details__bill-info,
+.details__dates{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.details__select-btn{
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    background: #6fb316;
+    font-size: 24px;
+    max-width: 650px;
+}
+
+@media screen and (min-width: 641px){
+    .group,
+    .period{
+        width: 47%;
+        margin: 2% 0 0 2%;
+    }
+    .details{
+        max-width: 550px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .group,
+    .period{
+        width: 30.7%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
